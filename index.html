@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>The HTML5 Herald</title>
+  <link rel="stylesheet" type="text/css" href="vendor/Normalize.css">
+  <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <h1>Flickity - images</h1>
+  <button class ="button--reset">Reset</button>
+    <div class="main-carousel">
+    </div>
+    <div class="progress-bar"></div>
+    <script id="templateSlide" type="x-tmpl-mustache">
+      <div class="carousel-cell container" {{{image}}}>
+        <h1> {{title}} </h1>
+        {{{description}}}
+      </div>
+    </script>
+    <script>
+    var table = [
+      {
+        image: "style = 'background-image: url(images/1.jpg)'",
+        title: "Slajd nr 1",
+        description: "<p>Vestibulum sed odio sapien. Pellentesque aliquet id odio ut egestas. Donec eu ipsum sit amet tellus hendrerit lacinia eget id.</p>"
+      },
+      {
+        image: "style='background-image: url(images/2.jpg)'",
+        title: "Slajd nr 2",
+        description: "<p>Vestibulum sed odio sapien. Pellentesque aliquet id odio ut egestas. Donec eu ipsum sit amet tellus hendrerit lacinia eget id.</p>"
+      },
+      {
+        image: "style='background-image: url(images/3.jpg)'",
+        title: "Slajd nr 3",
+        description: "<p>Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam diam felis, ornare in mi in, scelerisque posuere.</p>"
+      },
+      {
+        image: "style='background-image: url(images/4.jpg)'",
+        title: "Slajd nr 4",
+        description: "<p>Pellentesque dictum sodales leo rutrum sodales. Proin consectetur vel orci vel mollis. Aliquam vehicula molestie sodales. Fusce a justo vel.</p>"
+      },
+      {
+        image: "style='background-image: url(images/5.jpg)'",
+        title: "Slajd nr 5",
+        description: "<p>Nam accumsan metus nec libero malesuada ullamcorper. Integer efficitur mauris sit amet varius aliquam. Morbi eleifend pretium diam, eget maximus.</p>"
+      },
+      {
+        image: "style='background-image: url(images/6.jpg)'",
+        title: "Slajd nr 6",
+        description: "<p>Integer dictum mauris erat, aliquet feugiat arcu viverra vitae. Aenean a velit id odio condimentum dictum venenatis sit amet est.</p>"
+      }
+    ];
+  </script>
+  <script src="js/mustache.js"></script>
+  <script src="vendor/flickity.pkgd.min.js"></script>
+  <script src="vendor/hash.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

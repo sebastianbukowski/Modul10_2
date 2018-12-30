@@ -1,0 +1,74 @@
+/* external css: flickity.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 1200px;
+}
+
+.flickity-button {
+  position: absolute;
+  background: transparent;
+  color: white;
+}
+
+.flickity-button-icon {
+  fill: white;
+}
+
+.flickity-prev-next-button {
+  top: 30%;
+  width: 44px;
+  height: 44px;
+}
+
+.main-carousel {
+  background: #EEE;
+  margin: 0 auto;
+}
+
+.carousel-cell {
+  min-height: 250px;
+  height: 50%;
+  background-size: cover;
+}
+
+.carousel-cell h1 {
+  margin-top: 50px;
+}
+
+.carousel-cell h1, .carousel-cell p {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 1px black;
+}
+
+.button--reset {
+  font-size: 10px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 100px;
+  left: 100px;
+  border-radius: 100%;
+  z-index: 1000;
+  background-color: green;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel img {
+    height: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
