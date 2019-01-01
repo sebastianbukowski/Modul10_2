@@ -22,37 +22,53 @@
     <script>
     var table = [
       {
+        coords: {lat: -25.363, lng: 131.044},
         image: "style = 'background-image: url(images/1.jpg)'",
         title: "Slajd nr 1",
         description: "<p>Vestibulum sed odio sapien. Pellentesque aliquet id odio ut egestas. Donec eu ipsum sit amet tellus hendrerit lacinia eget id.</p>"
       },
       {
+        coords: {lat: -25.363, lng: 134.044},
         image: "style='background-image: url(images/2.jpg)'",
         title: "Slajd nr 2",
         description: "<p>Vestibulum sed odio sapien. Pellentesque aliquet id odio ut egestas. Donec eu ipsum sit amet tellus hendrerit lacinia eget id.</p>"
       },
       {
+        coords: {lat: -25.363, lng: 137.044},
         image: "style='background-image: url(images/3.jpg)'",
         title: "Slajd nr 3",
         description: "<p>Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam diam felis, ornare in mi in, scelerisque posuere.</p>"
       },
       {
+        coords: {lat: -25.363, lng: 139.044},
         image: "style='background-image: url(images/4.jpg)'",
         title: "Slajd nr 4",
         description: "<p>Pellentesque dictum sodales leo rutrum sodales. Proin consectetur vel orci vel mollis. Aliquam vehicula molestie sodales. Fusce a justo vel.</p>"
       },
       {
+        coords: {lat: -25.363, lng: 142.044},
         image: "style='background-image: url(images/5.jpg)'",
         title: "Slajd nr 5",
         description: "<p>Nam accumsan metus nec libero malesuada ullamcorper. Integer efficitur mauris sit amet varius aliquam. Morbi eleifend pretium diam, eget maximus.</p>"
       },
       {
+        coords: {lat: -25.363, lng: 146.044},
         image: "style='background-image: url(images/6.jpg)'",
         title: "Slajd nr 6",
         description: "<p>Integer dictum mauris erat, aliquet feugiat arcu viverra vitae. Aenean a velit id odio condimentum dictum venenatis sit amet est.</p>"
       }
     ];
   </script>
+
+  <div id="page-wrapper" class="container-map">
+	<h3>My Google Maps Function</h3>
+  <p>
+		<button id="center-map">Center map</button>
+	</p>
+    <div id="map"></div>
+    <p id="infos"></p>
+</div>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlh3IB6HyNqEBcC5dvNecgV23yjFlxv64&callback=initMap"></script>
   <script src="js/mustache.js"></script>
   <script src="vendor/flickity.pkgd.min.js"></script>
   <script src="vendor/hash.js"></script>

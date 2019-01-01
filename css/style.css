@@ -5,6 +5,7 @@
 
 body {
   font-family: sans-serif;
+  padding: 10px;
 }
 
 .container {
@@ -64,6 +65,18 @@ body {
   height: 20px;
   width: 0;
   background: #333;
+}
+
+.container-map {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#map {
+  min-height: 250px;
+  height: 50%;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
