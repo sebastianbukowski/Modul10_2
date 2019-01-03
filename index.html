@@ -14,7 +14,7 @@
     </div>
     <div class="progress-bar"></div>
     <script id="templateSlide" type="x-tmpl-mustache">
-      <div class="carousel-cell container" {{{image}}}>
+      <div class="carousel-cell container" style = "background-image: url({{image}})">
         <h1> {{title}} </h1>
         {{{description}}}
       </div>
@@ -22,32 +22,32 @@
     <script>
     var table = [
       {
-        image: "style = 'background-image: url(images/1.jpg)'",
+        image: "images/1.jpg",
         title: "Slajd nr 1",
         description: "<p>Vestibulum sed odio sapien. Pellentesque aliquet id odio ut egestas. Donec eu ipsum sit amet tellus hendrerit lacinia eget id.</p>"
       },
       {
-        image: "style='background-image: url(images/2.jpg)'",
+        image: "images/2.jpg",
         title: "Slajd nr 2",
         description: "<p>Vestibulum sed odio sapien. Pellentesque aliquet id odio ut egestas. Donec eu ipsum sit amet tellus hendrerit lacinia eget id.</p>"
       },
       {
-        image: "style='background-image: url(images/3.jpg)'",
+        image: "images/3.jpg",
         title: "Slajd nr 3",
         description: "<p>Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam diam felis, ornare in mi in, scelerisque posuere.</p>"
       },
       {
-        image: "style='background-image: url(images/4.jpg)'",
+        image: "images/4.jpg",
         title: "Slajd nr 4",
         description: "<p>Pellentesque dictum sodales leo rutrum sodales. Proin consectetur vel orci vel mollis. Aliquam vehicula molestie sodales. Fusce a justo vel.</p>"
       },
       {
-        image: "style='background-image: url(images/5.jpg)'",
+        image: "images/5.jpg",
         title: "Slajd nr 5",
         description: "<p>Nam accumsan metus nec libero malesuada ullamcorper. Integer efficitur mauris sit amet varius aliquam. Morbi eleifend pretium diam, eget maximus.</p>"
       },
       {
-        image: "style='background-image: url(images/6.jpg)'",
+        image: "images/6.jpg",
         title: "Slajd nr 6",
         description: "<p>Integer dictum mauris erat, aliquet feugiat arcu viverra vitae. Aenean a velit id odio condimentum dictum venenatis sit amet est.</p>"
       }
