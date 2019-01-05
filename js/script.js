@@ -40,35 +40,43 @@ flkty.on( 'scroll', function( progress ) {
 });
 
 // GOOGLE MAPS
-
+var marker = {};
 (function(){
+  var reset = function(event) {
+    console.log(event);
+  }
   var infos = document.getElementById('infos');
-
   	window.initMap = function() {
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 4,
+			zoom: 0,
 			center: table[0].coords
 		});
-    var markers = [];
+    document.getElementById('center-map').addEventListener('click', function(event){
+        event.preventDefault();
+        map.panTo(table[0].coords);
+    });
     for(var i=0; i<table.length; i++){
       console.log(table[i]);
-      var marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
         position: table[i].coords,
-        map: map
+        map: map,
       });
-      markers.push(marker);
+      addListenerToMarker(marker,i);
+    }
+    flkty.on( 'change', function(index) {
+      console.log(map);
+      console.log(index); //numer slajdu do którego została przewinięta karuzela
+      map.zoom = 4;
+      map.panTo(table[index].coords);
 
-      marker.addListener('click', function(){
-        console.log(markers);
-        infos.innerHTML = 'You clicked marker';
-      });
-
-    console.log('markers  at the end of loop =>', markers);
+    });
   }
 
-  document.getElementById('center-map').addEventListener('click', function(event){
-      event.preventDefault();
-      map.panTo(table[0].coords);
-  });
-}
+  function addListenerToMarker(marker, num) {
+    console.log('i from addlistener function =>',num)
+    marker.addListener('click', function(){
+      flkty.selectCell(num);
+      infos.innerHTML = 'You clicked marker' + num;
+    });
+  }
 })();
